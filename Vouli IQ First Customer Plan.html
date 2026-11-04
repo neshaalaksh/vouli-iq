@@ -1,0 +1,462 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Vouli IQ First Customer Plan</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&family=Geist+Mono:wght@400&display=swap">
+<style>
+/* Layout: Scinth brand, light version. 16:9 slide panels on near-black, hairline borders, one lime spark per slide, lime-to-teal glow on the cover only. */
+:root {
+  --bg: #FBFBF8;
+  --ground: #EDEDE8;
+  --text: #0B0B0C;
+  --text-2: #4A4A47;
+  --text-3: #62625E;
+  --text-4: #75756F;
+  --lime: #B9F55D;
+  --lime-ink: #4A6A0E;
+  --teal: #00B9B2;
+  --on-lime: #0B0B0C;
+  --line: rgba(11, 11, 12, 0.12);
+  --line-strong: rgba(11, 11, 12, 0.22);
+  --font-sans: "Geist", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme: light;
+}
+@supports (color: oklch(0.9 0.19 128)) {
+  :root { --lime: oklch(0.9 0.19 128); --teal: oklch(0.7 0.14 190); }
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--ground);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.55;
+  padding-block: 32px 96px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.deck { display: flex; flex-direction: column; align-items: center; gap: 28px; }
+.frame { width: min(1200px, 100%); container-type: inline-size; scroll-margin-top: 24px; }
+.slide {
+  aspect-ratio: 16 / 9;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: clamp(24px, 5cqi, 64px);
+  padding-bottom: clamp(20px, 3.2cqi, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2.6cqi, 32px);
+  position: relative;
+  overflow: hidden;
+}
+.slide > .body { flex: 1; display: flex; flex-direction: column; gap: clamp(16px, 2.4cqi, 30px); min-width: 0; position: relative; z-index: 1; }
+
+.mark { font-family: var(--font-mono); font-size: clamp(11px, 1cqi, 12px); letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-3); margin: 0; display: flex; gap: 14px; }
+.mark .n { color: var(--lime-ink); }
+h1, h2, h3 { font-family: var(--font-sans); font-weight: 300; margin: 0; text-wrap: balance; color: var(--text); }
+h1 { font-size: clamp(40px, 7.6cqi, 96px); line-height: 0.98; letter-spacing: -0.045em; max-width: 13ch; }
+h2 { font-size: clamp(28px, 4.2cqi, 54px); line-height: 1.04; letter-spacing: -0.035em; max-width: 20ch; }
+h3 { font-size: clamp(19px, 2.2cqi, 28px); line-height: 1.15; letter-spacing: -0.02em; }
+p { margin: 0; }
+.sub { font-size: clamp(15px, 1.6cqi, 19px); color: var(--text-2); max-width: 54ch; }
+.small { font-size: clamp(13px, 1.3cqi, 15px); color: var(--text-2); }
+
+.foot {
+  display: flex; justify-content: space-between; gap: 16px; position: relative; z-index: 1;
+  font-family: var(--font-mono); font-size: clamp(10px, 0.95cqi, 11px); letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--text-4); border-top: 1px solid var(--line); padding-top: 12px; font-variant-numeric: tabular-nums;
+}
+.logo { font-family: var(--font-sans); font-weight: 500; letter-spacing: -0.03em; text-transform: none; font-size: clamp(13px, 1.3cqi, 16px); color: var(--text); }
+
+/* Cover */
+.glow { position: absolute; inset: auto -10% -40% auto; width: 75%; aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, color-mix(in oklab, var(--lime) 55%, transparent) 0%, color-mix(in oklab, var(--teal) 35%, transparent) 38%, transparent 68%);
+  filter: blur(40px); opacity: 0.45; pointer-events: none; max-width: 100%; }
+.cover .body { justify-content: flex-end; }
+.cover .logo-big { font-weight: 500; font-size: clamp(22px, 2.6cqi, 32px); letter-spacing: -0.04em; }
+
+/* Lists of rows */
+.rows { display: flex; flex-direction: column; border-top: 1px solid var(--line); }
+.row { display: grid; grid-template-columns: clamp(28px, 4cqi, 48px) minmax(0, 0.9fr) minmax(0, 1.5fr); gap: clamp(12px, 2.4cqi, 32px); padding-block: clamp(14px, 1.9cqi, 22px); border-bottom: 1px solid var(--line); align-items: baseline; }
+.row .k { font-family: var(--font-mono); font-size: clamp(11px, 1cqi, 12px); color: var(--lime-ink); letter-spacing: 0.1em; }
+.row p { font-size: clamp(14px, 1.5cqi, 18px); color: var(--text-2); }
+
+/* Stats strip */
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.stat { display: flex; flex-direction: column; gap: 4px; padding: clamp(12px, 1.6cqi, 18px) clamp(10px, 1.6cqi, 20px) 0 0; min-width: 0; }
+.stat + .stat { border-left: 1px solid var(--line); padding-left: clamp(10px, 1.6cqi, 20px); }
+.stat b { font-weight: 300; font-size: clamp(30px, 4.6cqi, 58px); line-height: 1; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; }
+.stat span { font-family: var(--font-mono); font-size: clamp(10px, 0.95cqi, 11px); letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-3); }
+
+/* Before / after */
+.compare { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: clamp(14px, 2.4cqi, 28px); flex: 1; }
+.pane { border: 1px solid var(--line); border-radius: 6px; padding: clamp(16px, 2.2cqi, 28px); display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.pane .tag { font-family: var(--font-mono); font-size: clamp(10px, 0.95cqi, 11px); letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); }
+.pane ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: clamp(13px, 1.4cqi, 16px); color: var(--text-2); }
+.pane ul li { padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+.pane.after { background: var(--lime); border-color: var(--lime-ink); color: var(--on-lime); }
+.pane.after .tag { color: var(--on-lime); opacity: 0.7; }
+.email { font-size: clamp(13px, 1.42cqi, 16.5px); line-height: 1.55; display: flex; flex-direction: column; gap: 10px; }
+.email .subj { font-weight: 500; }
+
+/* Timeline */
+.weeks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.wk { padding: clamp(14px, 1.9cqi, 22px) clamp(12px, 2cqi, 24px) 0 0; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.wk + .wk { border-left: 1px solid var(--line); padding-left: clamp(12px, 2cqi, 24px); }
+.wk .when { font-family: var(--font-mono); font-size: clamp(10px, 1cqi, 12px); letter-spacing: 0.14em; text-transform: uppercase; color: var(--lime-ink); }
+.wk ul { margin: 0; padding-left: 1em; display: flex; flex-direction: column; gap: 6px; font-size: clamp(13px, 1.42cqi, 17px); color: var(--text-2); }
+.target { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-top: auto; padding: clamp(12px, 1.6cqi, 18px) clamp(14px, 2cqi, 22px); border: 1px solid var(--line-strong); border-radius: 999px; font-size: clamp(14px, 1.5cqi, 18px); }
+.target .tag { font-family: var(--font-mono); font-size: clamp(10px, 0.95cqi, 11px); letter-spacing: 0.14em; text-transform: uppercase; color: var(--lime-ink); }
+
+/* Service columns */
+.cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 2cqi, 22px); }
+.col { border: 1px solid var(--line); border-radius: 6px; padding: clamp(16px, 2.2cqi, 26px); display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.col ul { margin: 0; padding-left: 1em; display: flex; flex-direction: column; gap: 6px; font-size: clamp(13px, 1.38cqi, 16px); color: var(--text-2); }
+.promise { display: flex; gap: clamp(14px, 3cqi, 40px); flex-wrap: wrap; font-size: clamp(13px, 1.4cqi, 16px); color: var(--text-2); margin-top: auto; }
+.promise span::before { content: "→ "; color: var(--lime-ink); }
+
+/* Flywheel */
+.loop { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(10px, 1.6cqi, 18px); align-items: stretch; }
+.step { border-top: 1px solid var(--line-strong); padding-top: 14px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.step .k { font-family: var(--font-mono); font-size: clamp(10px, 0.95cqi, 11px); letter-spacing: 0.14em; color: var(--lime-ink); }
+.step p { font-size: clamp(13px, 1.38cqi, 16px); color: var(--text-2); }
+.loopnote { font-size: clamp(16px, 2cqi, 24px); font-weight: 300; letter-spacing: -0.02em; max-width: 34ch; margin-top: auto; }
+
+/* Investment */
+.price { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: clamp(14px, 2.4cqi, 28px); }
+.card-lime { background: var(--lime); color: var(--on-lime); border-radius: 6px; padding: clamp(18px, 2.6cqi, 32px); display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.card-lime .tag, .pricebox .tag { font-family: var(--font-mono); font-size: clamp(10px, 0.95cqi, 11px); letter-spacing: 0.14em; text-transform: uppercase; }
+.card-lime .tag { opacity: 0.7; }
+.card-lime .big { font-weight: 300; font-size: clamp(40px, 6.4cqi, 80px); line-height: 1; letter-spacing: -0.05em; font-variant-numeric: tabular-nums; }
+.card-lime p { font-size: clamp(13px, 1.4cqi, 16px); }
+.pricebox { border: 1px solid var(--line); border-radius: 6px; padding: clamp(18px, 2.6cqi, 32px); display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.pricebox .tag { color: var(--text-3); }
+.pricebox .big { font-weight: 300; font-size: clamp(40px, 6.4cqi, 80px); line-height: 1; letter-spacing: -0.05em; font-variant-numeric: tabular-nums; }
+.big small { font-size: 0.32em; letter-spacing: 0; font-weight: 400; opacity: 0.75; }
+.opt { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lime-ink); vertical-align: middle; margin-left: 6px; }
+.pricebox p { font-size: clamp(13px, 1.4cqi, 16px); color: var(--text-2); }
+.today { display: flex; flex-direction: column; gap: 8px; font-size: clamp(13px, 1.38cqi, 16px); color: var(--text-2); margin-top: auto; }
+.today b { color: var(--text); font-weight: 400; }
+
+/* Next */
+.steps { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); counter-reset: s; }
+.steps li { counter-increment: s; display: flex; gap: clamp(14px, 2.4cqi, 30px); align-items: baseline; padding-block: clamp(12px, 1.8cqi, 20px); border-bottom: 1px solid var(--line); font-weight: 300; font-size: clamp(20px, 2.8cqi, 34px); letter-spacing: -0.02em; }
+.steps li::before { content: "0" counter(s); font-family: var(--font-mono); font-size: clamp(11px, 1cqi, 12px); color: var(--lime-ink); letter-spacing: 0.1em; min-width: 2.2em; }
+.contact { font-family: var(--font-mono); font-size: clamp(11px, 1.1cqi, 13px); letter-spacing: 0.08em; color: var(--text-2); margin-top: auto; user-select: all; }
+.tagline { color: var(--text-3); font-size: clamp(13px, 1.4cqi, 16px); max-width: 46ch; }
+
+
+/* Roadmap */
+.road { display: grid; grid-template-columns: minmax(96px, 1.3fr) repeat(12, minmax(0, 1fr)); grid-template-rows: auto auto repeat(5, minmax(clamp(26px, 3.4cqi, 40px), auto)) auto; row-gap: clamp(6px, 0.9cqi, 10px); position: relative; flex: 1; align-content: start; }
+.road .phase { grid-row: 1; font-family: var(--font-mono); font-size: clamp(10px, 0.95cqi, 11px); letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); padding-bottom: 6px; border-bottom: 1px solid var(--line-strong); }
+.road .phase + .phase { padding-left: 10px; }
+.road .mo { grid-row: 2; font-family: var(--font-mono); font-size: clamp(10px, 0.95cqi, 11px); letter-spacing: 0.1em; color: var(--text-4); padding-left: 6px; border-left: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+.road .lab { grid-column: 1; font-size: clamp(13px, 1.45cqi, 17px); color: var(--text); align-self: center; line-height: 1.2; padding-right: 10px; }
+.road .lab small { display: block; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lime-ink); margin-top: 2px; }
+.road .bar { align-self: stretch; border-radius: 4px; background: rgba(11, 11, 12, 0.06); border: 1px solid var(--line); display: flex; align-items: center; padding-inline: clamp(8px, 1.1cqi, 14px); font-size: clamp(11px, 1.15cqi, 14px); color: var(--text-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; position: relative; z-index: 1; }
+.road .bar.ink { background: var(--text); color: var(--bg); border-color: var(--text); }
+.road .bar.dash { background: transparent; border: 1px dashed var(--line-strong); }
+.road .line { grid-row: 2 / 8; border-left: 1px dashed var(--line-strong); z-index: 0; pointer-events: none; }
+.road .line.end { border-left: 0; border-right: 1px dashed var(--line-strong); }
+.road .line.key { border-left: 1.5px solid var(--lime-ink); }
+.road .ms { grid-row: 8; text-align: right; padding-top: 10px; padding-right: 8px; display: flex; flex-direction: column; gap: 2px; align-items: flex-end; min-width: 0; }
+.road .ms .tag { font-family: var(--font-mono); font-size: clamp(10px, 0.95cqi, 11px); letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); }
+.road .ms span:last-child { font-size: clamp(12px, 1.3cqi, 15px); color: var(--text); line-height: 1.25; }
+.road .ms.key .tag { color: var(--lime-ink); }
+.road .ms.key span:last-child { background: var(--lime); color: var(--on-lime); padding: 2px 8px; border-radius: 999px; }
+@media (max-width: 760px) {
+  .road { grid-template-columns: 72px repeat(12, minmax(0, 1fr)); }
+  .road .bar { font-size: 0; padding: 0; }
+  .road .mo { font-size: 9px; padding-left: 3px; letter-spacing: 0; }
+  .road .phase { font-size: 9px; letter-spacing: 0.08em; }
+  .road .ms span:last-child { font-size: 11px; }
+  .road .ms .tag { white-space: nowrap; font-size: 9px; letter-spacing: 0.08em; }
+  .road .ms.key span:last-child { border-radius: 4px; padding: 2px 6px; }
+}
+
+/* Pager */
+.pager { position: fixed; right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  display: flex; align-items: center; gap: 4px; background: var(--bg); border: 1px solid var(--line-strong); border-radius: 999px; padding: 4px;
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; color: var(--text-2); font-variant-numeric: tabular-nums; z-index: 5; }
+.pager button { width: 32px; height: 32px; border-radius: 50%; border: 0; background: transparent; color: var(--text); font-size: 15px; cursor: pointer; display: grid; place-items: center; }
+.pager button:hover { background: rgba(11, 11, 12, 0.06); }
+.pager button:focus-visible { outline: 2px solid var(--lime-ink); outline-offset: 2px; }
+.pager span { min-width: 4.2em; text-align: center; }
+
+@media (max-width: 760px) {
+  .slide { aspect-ratio: auto; }
+  .row { grid-template-columns: 28px minmax(0, 1fr); }
+  .row p { grid-column: 2; }
+  .stats, .loop { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 0; }
+  .loop { gap: 18px 14px; }
+  .stat:nth-child(3) { border-left: 0; padding-left: 0; }
+  .compare, .price { grid-template-columns: minmax(0, 1fr); }
+  .weeks, .cols { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .wk + .wk { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); }
+  .target, .promise, .loopnote, .today, .contact { margin-top: 0; }
+  .target { border-radius: 6px; }
+}
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+
+<main class="deck">
+
+  <section class="frame" aria-label="Slide 1">
+    <div class="slide cover">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="body">
+        <p class="mark"><span class="n">00</span><span>Proposal for Vishnu Keerthi · Vouli IQ</span></p>
+        <h1>Your first customer, in 90 days.</h1>
+        <p class="sub">And a system that keeps bringing in the next ones.</p>
+      </div>
+      <div class="foot"><span class="logo">scinth.</span><span>November 2026</span></div>
+    </div>
+  </section>
+
+  <section class="frame" aria-label="Slide 2">
+    <div class="slide">
+      <div class="body">
+        <p class="mark"><span class="n">01</span><span>What you told us</span></p>
+        <h2>One paying enterprise customer, to prove Vouli IQ is real.</h2>
+        <p class="sub">You built 69 modules and a full sales engine on your own, in about five months. Most founders at this stage have neither. What’s missing is a buyer saying yes.</p>
+        <div class="stats">
+          <div class="stat"><b>352</b><span>People reached</span></div>
+          <div class="stat"><b>1.4%</b><span>Replied</span></div>
+          <div class="stat"><b>3</b><span>Positive replies</span></div>
+          <div class="stat"><b>0</b><span>Customers yet</span></div>
+        </div>
+      </div>
+      <div class="foot"><span class="logo">scinth.</span><span>Source: Pioneer OS dashboard, to 26 Oct 2026</span></div>
+    </div>
+  </section>
+
+  <section class="frame" aria-label="Slide 3">
+    <div class="slide">
+      <div class="body">
+        <p class="mark"><span class="n">02</span><span>What we found</span></p>
+        <h2>Three things you can check yourself today.</h2>
+        <div class="rows">
+          <div class="row"><span class="k">A</span><h3>Your target customer list promises things Vouli IQ doesn’t do</h3><p>It says Vouli IQ handles board meeting packs, minutes and e-signing. Your own website says it doesn’t. A buyer would find out in the first demo.</p></div>
+          <div class="row"><span class="k">B</span><h3>305 pending LinkedIn invites</h3><p>Only 11% were accepted. A pile this size can get an account restricted, and that’s the account your buyers check.</p></div>
+          <div class="row"><span class="k">C</span><h3>The “next year” replies are warm leads</h3><p>2027 budgets are being set right now. Those prospects need a timed follow-up, not a closed file.</p></div>
+        </div>
+      </div>
+      <div class="foot"><span class="logo">scinth.</span><span>Sources: vouliiq.com/faq · your dashboard · your call with us</span></div>
+    </div>
+  </section>
+
+  <section class="frame" aria-label="Slide 4">
+    <div class="slide">
+      <div class="body">
+        <p class="mark"><span class="n">03</span><span>The 90-day plan</span></p>
+        <h2>Fast enough to feel it in the first month.</h2>
+        <div class="weeks">
+          <div class="wk">
+            <span class="when">Weeks 1 to 2 · Focus</span>
+            <ul>
+              <li>Global market, one buyer segment first</li>
+              <li>One pitch, used everywhere</li>
+              <li>A demo built from live modules</li>
+              <li>Founding-customer pricing and discounts</li>
+            </ul>
+          </div>
+          <div class="wk">
+            <span class="when">Weeks 3 to 6 · Reach</span>
+            <ul>
+              <li>Outreach live to the new buyer</li>
+              <li>Warm intros through your old companies</li>
+              <li>LinkedIn rebuilt and posting</li>
+              <li>First qualified meetings</li>
+            </ul>
+          </div>
+          <div class="wk">
+            <span class="when">Weeks 7 to 12 · Close</span>
+            <ul>
+              <li>Every meeting prepped with you</li>
+              <li>Proposals and security answers</li>
+              <li>Follow-up until signed</li>
+              <li>Next-year leads nurtured</li>
+            </ul>
+          </div>
+        </div>
+        <p class="target"><span class="tag">Target</span><span>First paying customer or paid pilot by day 90.</span></p>
+      </div>
+      <div class="foot"><span class="logo">scinth.</span><span>Weekly results report every Friday</span></div>
+    </div>
+  </section>
+
+
+  <section class="frame" aria-label="Slide 5">
+    <div class="slide">
+      <div class="body">
+        <p class="mark"><span class="n">04</span><span>The roadmap</span></p>
+        <h2>Six months, three checkpoints.</h2>
+        <div class="road" role="img" aria-label="Six-month roadmap. Weeks 1 to 2: focus. From week 3: outreach and LinkedIn. From week 7: closing. From month 4: case study and referrals. Checkpoints at day 30, day 90 and month 6.">
+          <span class="phase" style="grid-column: 2 / 8">Land the first customer</span>
+          <span class="phase" style="grid-column: 8 / 14">Make it repeatable</span>
+          <span class="mo" style="grid-column: 2 / 4">M1</span>
+          <span class="mo" style="grid-column: 4 / 6">M2</span>
+          <span class="mo" style="grid-column: 6 / 8">M3</span>
+          <span class="mo" style="grid-column: 8 / 10">M4</span>
+          <span class="mo" style="grid-column: 10 / 12">M5</span>
+          <span class="mo" style="grid-column: 12 / 14">M6</span>
+
+          <span class="line" style="grid-column: 4" aria-hidden="true"></span>
+          <span class="line key" style="grid-column: 8" aria-hidden="true"></span>
+          <span class="line end" style="grid-column: 13" aria-hidden="true"></span>
+
+          <span class="lab" style="grid-row: 3">Focus</span>
+          <span class="bar ink" style="grid-row: 3; grid-column: 2 / 3" title="Buyer segment, pitch, demo, pricing">2 weeks</span>
+          <span class="lab" style="grid-row: 4">Outreach</span>
+          <span class="bar" style="grid-row: 4; grid-column: 3 / 14">Target lists, human-written emails, warm intros, replies within a day</span>
+          <span class="lab" style="grid-row: 5">LinkedIn<small>Option B</small></span>
+          <span class="bar dash" style="grid-row: 5; grid-column: 3 / 14">Profile rebuilt, three posts a week, daily engagement with buyers</span>
+          <span class="lab" style="grid-row: 6">Closing</span>
+          <span class="bar" style="grid-row: 6; grid-column: 5 / 14">Meeting briefs, proposals, security answers, follow-up until signed</span>
+          <span class="lab" style="grid-row: 7">Proof</span>
+          <span class="bar" style="grid-row: 7; grid-column: 8 / 14">Case study, named outreach, referrals</span>
+
+          <div class="ms" style="grid-column: 2 / 4"><span class="tag">Day 30</span><span>Meetings booking</span></div>
+          <div class="ms key" style="grid-column: 5 / 8"><span class="tag">Day 90</span><span>First customer or paid pilot</span></div>
+          <div class="ms" style="grid-column: 10 / 14"><span class="tag">Month 6</span><span>A repeatable pipeline</span></div>
+        </div>
+      </div>
+      <div class="foot"><span class="logo">scinth.</span><span>Day 90 review: pricing and scope revisited on results</span></div>
+    </div>
+  </section>
+
+  <section class="frame" aria-label="Slide 6">
+    <div class="slide">
+      <div class="body">
+        <p class="mark"><span class="n">05</span><span>What we run for you</span></p>
+        <h2>We do the work. You take the meetings.</h2>
+        <div class="cols">
+          <div class="col">
+            <h3>Outreach</h3>
+            <ul>
+              <li>Target lists and research from your Apollo account</li>
+              <li>Emails written by people, for one buyer</li>
+              <li>Replies handled within a day</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>LinkedIn <span class="opt">Option B</span></h3>
+            <ul>
+              <li>Profile reworked for your buyer</li>
+              <li>Three posts a week, from your real stories</li>
+              <li>Daily engagement with target buyers</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3>Closing</h3>
+            <ul>
+              <li>Meeting briefs and demo flow</li>
+              <li>Proposals and pricing support</li>
+              <li>A security answers pack</li>
+            </ul>
+          </div>
+        </div>
+        <p class="promise"><span>You approve everything before it goes out</span><span>The product and data stay yours</span><span>Leave after any month</span></p>
+      </div>
+      <div class="foot"><span class="logo">scinth.</span><span>Your time: about 2 hours a week</span></div>
+    </div>
+  </section>
+
+  <section class="frame" aria-label="Slide 7">
+    <div class="slide">
+      <div class="body">
+        <p class="mark"><span class="n">06</span><span>After the first customer</span></p>
+        <h2>The first one makes the next ones easier.</h2>
+        <div class="loop">
+          <div class="step"><span class="k">01</span><h3>First customer</h3><p>Signed, live and happy to be named.</p></div>
+          <div class="step"><span class="k">02</span><h3>Case study</h3><p>Real results, written up with them.</p></div>
+          <div class="step"><span class="k">03</span><h3>Proof in outreach</h3><p>Every email and post now has a name behind it.</p></div>
+          <div class="step"><span class="k">04</span><h3>Referrals</h3><p>Their peers ask about you, and you’re ready.</p></div>
+        </div>
+        <p class="loopnote">Every customer feeds the next round. That’s the system we leave you with.</p>
+      </div>
+      <div class="foot"><span class="logo">scinth.</span><span>From first customer to a repeatable pipeline</span></div>
+    </div>
+  </section>
+
+  <section class="frame" aria-label="Slide 8">
+    <div class="slide">
+      <div class="body">
+        <p class="mark"><span class="n">07</span><span>Investment</span></p>
+        <h2>Two ways to start.</h2>
+        <div class="price">
+          <div class="pricebox">
+            <span class="tag">Option A · Outreach and closing</span>
+            <span class="big">₹20,000 <small>/ month + 10%</small></span>
+            <p>We run outreach and closing. You run LinkedIn yourself.</p>
+          </div>
+          <div class="card-lime">
+            <span class="tag">Option B · Outreach, LinkedIn and closing</span>
+            <span class="big">₹30,000 <small>/ month + 10%</small></span>
+            <p>Everything in A, and we run your LinkedIn too.</p>
+          </div>
+        </div>
+        <p class="today"><span><b>10% success fee:</b> on first-year revenue from customers we bring in, paid only after you’re paid.</span><span><b>Month 1 is a sprint:</b> if outreach isn’t live with meetings booking by day 30, you walk away.</span></p>
+      </div>
+      <div class="foot"><span class="logo">scinth.</span><span>We work from your existing Apollo account, which stays on your side</span></div>
+    </div>
+  </section>
+
+  <section class="frame" aria-label="Slide 9">
+    <div class="slide">
+      <div class="body">
+        <p class="mark"><span class="n">08</span><span>Next steps</span></p>
+        <h2>We can start next week.</h2>
+        <ol class="steps">
+          <li>Sign the NDA and share Pioneer OS data</li>
+          <li>Confirm the sprint</li>
+          <li>Kick-off and ICP workshop on [date]</li>
+        </ol>
+        <p class="tagline">We question what everyone else assumes. Then we build what they didn’t see coming.</p>
+        <p class="contact">Neshaa Lakshminarayanan · neshaa@scinth.co</p>
+      </div>
+      <div class="foot"><span class="logo">scinth.</span><span>scinth.co</span></div>
+    </div>
+  </section>
+
+</main>
+
+<nav class="pager" aria-label="Slides">
+  <button type="button" id="prev" aria-label="Previous slide">↑</button>
+  <span id="count">01 / 09</span>
+  <button type="button" id="next-btn" aria-label="Next slide">↓</button>
+</nav>
+
+<script>
+(function () {
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.frame'));
+  var count = document.getElementById('count');
+  var current = 0;
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function show() { count.textContent = pad(current + 1) + ' / ' + pad(slides.length); }
+  function go(i) {
+    current = Math.max(0, Math.min(slides.length - 1, i));
+    slides[current].scrollIntoView({ block: 'start' });
+    show();
+  }
+  document.getElementById('prev').addEventListener('click', function () { go(current - 1); });
+  document.getElementById('next-btn').addEventListener('click', function () { go(current + 1); });
+  document.addEventListener('keydown', function (e) {
+    if (['ArrowDown', 'ArrowRight', 'PageDown', ' '].indexOf(e.key) > -1) { e.preventDefault(); go(current + 1); }
+    if (['ArrowUp', 'ArrowLeft', 'PageUp'].indexOf(e.key) > -1) { e.preventDefault(); go(current - 1); }
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { current = slides.indexOf(en.target); show(); }
+      });
+    }, { threshold: 0.55 });
+    slides.forEach(function (s) { io.observe(s); });
+  }
+})();
+</script>
+
+</body></html>
